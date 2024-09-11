@@ -1,0 +1,288 @@
+:root{
+    --main-color: black;
+    --main-bg-color: cornsilk;
+
+    --button-color: whitesmoke;       /* var(--button-color); */
+    --button-bg-color: #25523b;       /* var(--button-bg-color); */
+}
+
+figure{
+    float: left;
+    text-align: center;
+    width: 30%;     /*  1@#%$!@#$%!@#%!@#$%#@$%@#$%@#$%@$#% */
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    border: thin solid var(--main-color);
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+    max-width: 50em;
+    line-height: 1.3em;
+    padding: 1%;
+    margin: auto;
+}
+
+html{
+    background-color: white;
+}
+
+nav{
+    background-color: var(--main-bg-color);
+    text-align: center;
+}
+
+.activePage{
+    text-decoration: none;
+    border: thin solid black;
+    border-bottom: none;
+}
+nav a:hover{
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+}
+
+article, section, aside, nav{
+    padding: 1%;
+}
+
+table{
+    clear: both;
+}
+
+/* inspiration: https://colorlib.com/etc/regform/colorlib-regform-13/ */
+form{
+    max-width: 400px;
+    border: medium solid goldenrod;
+    background-color: black;
+    color: goldenrod;
+    padding: 1%;
+    margin: auto;
+}
+
+#wildlifeForm form{
+    max-width: 100%;
+}
+
+#wildlifeForm form #txtDescription{
+    height: 15em;
+}
+
+#wildlifeForm form textarea{
+    height: 35em;
+}
+
+form .submit{
+    text-align: center;
+}
+
+.contact label{
+    font-size: xx-small;
+}
+fieldset{
+    border: none;
+}
+
+fieldset p{
+    margin-bottom: 1em;
+}
+
+legend {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+label + input, label + textarea{
+    display: block;
+}
+
+input[type=text]{
+    border: 0;
+    background-color: black;
+    border-bottom: medium solid goldenrod;
+    width: 100%;
+    height: 2em;
+    color: goldenrod;
+    font-size: large;
+}
+
+select{
+  font-size: large;
+}
+
+textarea{
+    width: 100%;
+    height: 5em;
+}
+
+.buttons{
+    text-align: center;
+}
+
+input[type=submit]{
+    width: 80%;
+    text-align: center;
+    font-size: 2em;
+    background-color: goldenrod;
+    color: cornsilk;
+    border-color: cornsilk;
+    border-radius: .25em
+}
+
+/*code sample:  https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+.range input{
+    appearance: none;
+      width: 100%; /* Full-width */
+      height: 25px; /* Specified height */
+      background: lightgoldenrodyellow;
+      outline: none; /* Remove outline */
+      opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+      -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+      transition: opacity .2s;
+    }
+   
+    /* Mouse-over effects */
+    .range input:hover {
+      opacity: 1; /* Fully shown on mouse-over */
+    }
+   
+    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+    .range input::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Override default look */
+      appearance: none;
+      width: 25px; /* Set a specific slider handle width */
+      height: 25px; /* Slider handle height */
+      background: goldenrod;
+      cursor: pointer; /* Cursor on hover */
+    }
+   
+    .range input::-moz-range-thumb {
+      width: 25px; /* Set a specific slider handle width */
+      height: 25px; /* Slider handle height */
+      background: goldenrod;
+      cursor: pointer; /* Cursor on hover */
+    }
+
+/* adopt a criter */
+.button {
+    background-color: var(--button-bg-color);
+    padding: 1%;
+    border-radius: 1%;
+    display: block;
+    color: var(--button-color);
+    text-align: center;
+    max-width: 10em;
+}
+
+.button:hover{
+    color: var(--button-bg-color);
+    background-color: var(--button-color);
+}
+
+.fixed{
+    position: fixed;
+    right: 4%;
+    top: 4%;
+}
+
+/* grid setup */
+body{
+    display: grid;
+    grid-template-areas: "nav" "header" "main" "footer";
+}
+
+header{
+    grid-area: header;
+}
+nav {
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    max-width: 100%;
+}
+
+nav a{
+    display: inline-block;
+    padding: 0 1em;
+}
+
+ /* https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp*/
+ nav{
+   
+}
+  /* The dropdown container */
+.dropdown {
+    display: inline-block;
+  }
+
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+ 
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    /*background-color: #ddd;*/
+  }
+ 
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* w3 schools drop down https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp*/
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
+
+#updateList main p{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-evenly;
+    padding: .7em;
+    margin: 0;
+}
+
+#updateList main p:nth-child(odd) {
+    background-color:  antiquewhite;
+}
+
+#updateList main p:hover {
+    background-color:  var(--button-color);
+    color: var(--button-bg-color);
+    border: solid .1em var(--button-bg-color);
+    padding: .6em;
+}
